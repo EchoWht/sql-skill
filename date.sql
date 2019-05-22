@@ -14,3 +14,8 @@ select to_date('2019-05-21 00:00:00' ,'yyyy-mm-dd hh24:mi:ss')-to_date('2019-05-
 select round((cast(to_date('2019-05-21 00:00:00', 'yyyy-mm-dd hh24:mi:ss') as DATE) -
               cast(to_date('2019-05-18 00:00:00', 'yyyy-mm-dd hh24:mi:ss') as DATE)) * 24) as diffHour
 from dual;
+
+--取下月月初的00:00:00
+select  add_months(trunc(to_date('2019-05-26 10:00:10' ,'yyyy-mm-dd hh24:mi:ss'),'MM'),1) from dual;
+--取下月月末的10:00:10
+select  add_months(last_day(to_date('2019-05-26 10:00:10' ,'yyyy-mm-dd hh24:mi:ss')),1) from dual;
