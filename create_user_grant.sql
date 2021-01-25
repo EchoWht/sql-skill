@@ -10,3 +10,7 @@ grant all on databasename.* to 'newusername'@'%';
 SELECT User,Host FROM mysql.user;
 -- 查询用户的权限
 show grants for 'username'@'%';
+
+
+-- 修改密码
+set password for 'username'@'%' = password('newpassword');
