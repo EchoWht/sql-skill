@@ -1,0 +1,2 @@
+# 导入
+mysql -uroot -proot database_name <./database_file.sql
